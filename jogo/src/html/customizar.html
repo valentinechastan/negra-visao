@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizando...</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="painel">
+                <h1>Customizar</h1>
+                <p>Escolha as cores. Elas valem para as próximas partidas.</p>
+
+                <label class="campo">Cor do X
+                    <input type="color" id="cor-x">
+                </label>
+
+                <label class="campo">Cor do O
+                    <input type="color" id="cor-o">
+                </label>
+
+                <label class="campo">Cor das casas
+                    <input type="color" id="cor-casa">
+                </label>
+
+                <div class="previa" aria-label="Pré-visualização">
+                    <div class="espaco" id="previa-1"><span class="peca X">X</span></div>
+                    <div class="espaco" id="previa-2"><span class="peca O">O</span></div>
+                    <div class="espaco" id="previa-3"><span class="peca X">X</span></div>
+                </div>
+
+                <button class="botao" id="salvar" type="button">Salvar</button>
+                <button class="botao secundario" id="padrao" type="button">Restaurar padrão</button>
+
+                <p class="mensagem" id="mensagem" role="status"></p>
+
+                <a class="link-voltar" href="../../index.html">&larr; Voltar</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/tema.js"></script>
+    <script>
+        const campo_x = document.getElementById("cor-x")
+        const campo_o = document.getElementById("cor-o")
+        const campo_casa = document.getElementById("cor-casa")
+        const mensagem = document.getElementById("mensagem")
+
+        function preencher_campos(tema) {
+            campo_x.value = tema.x
+            campo_o.value = tema.o
+            campo_casa.value = tema.casa
+        }
+
+        function tema_dos_campos() {
+            return { x: campo_x.value, o: campo_o.value, casa: campo_casa.value }
+        }
+
+        // ao mexer em qualquer cor, a pré-visualização muda na hora
+        [campo_x, campo_o, campo_casa].forEach(function (campo) {
+            campo.addEventListener("input", function () {
+                aplicar_tema(tema_dos_campos())
+                mensagem.textContent = ""
+            })
+        })
+
+        document.getElementById("salvar").addEventListener("click", function () {
+            salvar_tema(tema_dos_campos())
+            mensagem.textContent = "Cores salvas!"
+        })
+
+        document.getElementById("padrao").addEventListener("click", function () {
+            preencher_campos(TEMA_PADRAO)
+            aplicar_tema(TEMA_PADRAO)
+            salvar_tema(TEMA_PADRAO)
+            mensagem.textContent = "Cores padrão restauradas."
+        })
+
+        preencher_campos(carregar_tema())
+    </script>
+</body>
+</html>

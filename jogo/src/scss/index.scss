@@ -1,0 +1,149 @@
+/* Menu inicial e tela de customizar */
+
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.painel {
+  width: 460px;
+  max-width: 100%;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: rgb(255, 245, 245);
+  border: 3px solid black;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 50px 2px;
+  text-align: center;
+}
+
+.painel h1 {
+  font-size: 44px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.painel h1 .X {
+  color: #2563eb;
+}
+
+.painel h1 .O {
+  color: #ef4444;
+}
+
+.painel p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.botao {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: inherit;
+  color: rgb(61, 65, 66);
+  text-decoration: none;
+  background-color: rgb(25, 182, 25);
+  border: 6px solid rgba(15, 211, 15, 0.575);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.botao:hover {
+  color: white;
+  background-color: rgb(29, 182, 29);
+  border-color: rgba(25, 145, 25, 0.575);
+  transition: 0.4s;
+}
+.botao:focus-visible {
+  outline: 4px solid black;
+  outline-offset: 2px;
+}
+
+.botao.secundario {
+  background-color: rgb(250, 214, 120);
+  border-color: rgba(214, 150, 20, 0.6);
+}
+.botao.secundario:hover {
+  background-color: rgb(235, 185, 60);
+}
+
+.botao.perigo {
+  background-color: rgb(235, 130, 130);
+  border-color: rgba(190, 40, 40, 0.6);
+}
+.botao.perigo:hover {
+  background-color: rgb(202, 32, 32);
+}
+
+.link-voltar {
+  margin-top: 4px;
+  font-size: 16px;
+  color: black;
+}
+
+.mensagem {
+  min-height: 22px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(20, 110, 20);
+}
+
+/* customizar */
+
+.campo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.campo input[type=color] {
+  width: 90px;
+  height: 46px;
+  padding: 2px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.previa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 210px;
+  margin: 0 auto;
+  border: 3px solid black;
+}
+
+.previa .espaco {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.previa .peca {
+  font-size: 48px;
+  font-weight: 900;
+  user-select: none;
+}

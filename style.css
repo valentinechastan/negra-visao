@@ -1,0 +1,561 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--green: #315f2c;
+--green-dark: #244923;
+--orange: #c86421;
+--yellow: #e6a629;
+--cream: #f8f0df;
+--cream-light: #fffaf0;
+--brown: #392113;
+--text: #292018;
+--border: #dfcfae;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: var(--cream-light);
+color: var(--text);
+line-height: 1.5;
+min-width: 1100px;
+}
+
+/* header */
+
+.header {
+width: 100%;
+min-height: 85px;
+padding: 15px 7%;
+display: flex;
+align-items: center;
+gap: 35px;
+background: var(--cream-light);
+border-bottom: 1px solid var(--border);
+}
+
+.logo-area {
+display: flex;
+align-items: center;
+gap: 12px;
+flex-shrink: 0;
+}
+
+.logo {
+width: 58px;
+height: 58px;
+border-radius: 50%;
+object-fit: cover;
+display: block;
+}
+
+.logo-text {
+display: flex;
+flex-direction: column;
+}
+
+.logo-text strong {
+font-size: 18px;
+color: var(--brown);
+}
+
+.logo-text span {
+font-size: 12px;
+color: var(--green);
+}
+
+/* menu */
+
+.desktop-nav {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 28px;
+flex: 1;
+}
+
+.desktop-nav a {
+text-decoration: none;
+color: var(--text);
+font-size: 14px;
+}
+
+.desktop-nav a:hover {
+color: var(--green);
+}
+
+button {
+border: none;
+cursor: pointer;
+font-family: inherit;
+}
+
+.donate-button {
+background: var(--green);
+color: white;
+padding: 12px 20px;
+border-radius: 25px;
+font-weight: bold;
+}
+
+/* começo */
+
+.hero {
+display: grid;
+grid-template-columns: 1fr 1fr;
+min-height: 420px;
+overflow: hidden;
+}
+
+.hero-content {
+padding: 70px 10%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.hero h1 {
+font-size: 60px;
+line-height: 1.05;
+color: var(--brown);
+margin-bottom: 5px;
+}
+
+.hero h2 {
+font-size: 30px;
+color: var(--green);
+margin-bottom: 20px;
+}
+
+.hero p {
+max-width: 520px;
+font-size: 17px;
+margin-bottom: 30px;
+}
+
+.hero-buttons {
+display: flex;
+gap: 15px;
+}
+
+.hero-buttons button {
+padding: 14px 22px;
+background: var(--green);
+color: white;
+border-radius: 8px;
+font-weight: bold;
+}
+
+.hero-buttons .secondary-button {
+background: transparent;
+color: var(--green);
+border: 2px solid var(--green);
+}
+
+/* imagem principal */
+
+.hero-image {
+min-height: 420px;
+background: #ddd;
+overflow: hidden;
+}
+
+.hero-image img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+}
+
+/* padrão */
+
+.pattern {
+height: 22px;
+
+background: repeating-linear-gradient(
+    45deg,
+    var(--orange),
+    var(--orange) 15px,
+    var(--yellow) 15px,
+    var(--yellow) 30px,
+    var(--green) 30px,
+    var(--green) 45px
+);
+
+}
+
+/* atividades */
+
+.activities {
+padding: 55px 7%;
+text-align: center;
+}
+
+.activities > h2 {
+font-size: 28px;
+margin-bottom: 30px;
+}
+
+.activity-grid {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 12px;
+}
+
+.activity-card {
+min-height: 180px;
+padding: 22px 14px;
+
+border: 1px solid var(--border);
+border-radius: 10px;
+
+background: var(--cream-light);
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+.activity-card i {
+font-size: 35px;
+color: var(--green);
+margin-bottom: 15px;
+}
+
+.activity-card h3 {
+font-size: 16px;
+margin-bottom: 8px;
+}
+
+.activity-card p {
+font-size: 13px;
+color: #5e554b;
+}
+
+/* eventos */
+
+.events {
+background: #f5e5c5;
+padding: 50px 7%;
+
+display: grid;
+grid-template-columns: 1fr 250px;
+gap: 30px;
+
+}
+
+.events-container {
+min-width: 0;
+}
+
+.events-title {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 25px;
+}
+
+.events-title h2 {
+font-size: 28px;
+}
+
+.events-title a {
+color: var(--green);
+text-decoration: none;
+font-weight: bold;
+}
+
+.events-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+}
+
+/* cards dos eventos */
+
+.event-card {
+background: var(--cream-light);
+border-radius: 10px;
+overflow: hidden;
+border: 1px solid var(--border);
+}
+
+.event-image {
+height: 120px;
+background: #d1d1d1;
+position: relative;
+overflow: hidden;
+}
+
+.event-image img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+}
+
+.event-date {
+position: absolute;
+top: 10px;
+left: 10px;
+
+background: white;
+
+border-radius: 8px;
+
+width: 48px;
+height: 50px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+line-height: 1;
+
+}
+
+.event-date strong {
+font-size: 20px;
+}
+
+.event-date span {
+font-size: 11px;
+color: var(--orange);
+font-weight: bold;
+}
+
+.event-info {
+padding: 15px;
+}
+
+.event-info h3 {
+font-size: 16px;
+margin-bottom: 7px;
+}
+
+.event-info p {
+font-size: 13px;
+margin-bottom: 5px;
+}
+
+.event-info small {
+font-size: 11px;
+color: #777;
+}
+
+/* apoio */
+
+.support {
+background: var(--green);
+color: white;
+
+border-radius: 10px;
+
+padding: 28px;
+
+align-self: end;
+
+}
+
+.support h2 {
+font-size: 22px;
+margin-bottom: 12px;
+}
+
+.support p {
+font-size: 14px;
+margin-bottom: 20px;
+}
+
+.support button {
+background: var(--orange);
+color: white;
+
+padding: 12px 22px;
+
+border-radius: 7px;
+
+font-weight: bold;
+
+}
+
+/* redes sociais */
+
+.social {
+background: var(--orange);
+color: white;
+
+padding: 25px;
+
+text-align: center;
+
+}
+
+.social h2 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+.social-icons a {
+color: white;
+font-size: 25px;
+}
+
+/* rodapé */
+
+footer {
+background: var(--brown);
+color: white;
+
+padding: 25px 7%;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 25px;
+
+}
+
+.footer-item {
+display: flex;
+align-items: center;
+gap: 12px;
+
+font-size: 13px;
+
+}
+
+.footer-item i {
+color: var(--yellow);
+font-size: 20px;
+}
+
+.footer-copy {
+font-size: 12px;
+text-align: right;
+}
+
+/* rolagem suave ao clicar nos links do menu */
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 100px;
+}
+
+/* link "jogar" (leva para o jogo da velha) */
+
+.desktop-nav a.nav-jogar {
+background: var(--yellow);
+color: var(--brown);
+padding: 8px 18px;
+border-radius: 20px;
+font-weight: bold;
+}
+
+.desktop-nav a.nav-jogar:hover {
+background: var(--orange);
+color: white;
+}
+
+/* link da seção atual no menu (marcado pelo script.js) */
+
+.desktop-nav a.ativo {
+color: var(--green);
+font-weight: bold;
+border-bottom: 2px solid var(--orange);
+}
+
+/* janela "doe / apoie" */
+
+.modal {
+position: fixed;
+inset: 0;
+background: rgba(57, 33, 19, 0.65);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 100;
+}
+
+.modal[hidden] {
+display: none;
+}
+
+.modal-box {
+position: relative;
+background: var(--cream-light);
+border: 1px solid var(--border);
+border-top: 8px solid var(--orange);
+border-radius: 12px;
+width: 440px;
+max-width: 90%;
+padding: 35px 30px 30px;
+}
+
+.modal-box h2 {
+font-size: 24px;
+color: var(--brown);
+margin-bottom: 12px;
+}
+
+.modal-box p {
+font-size: 15px;
+margin-bottom: 22px;
+}
+
+.modal-fechar {
+position: absolute;
+top: 8px;
+right: 12px;
+background: transparent;
+font-size: 30px;
+line-height: 1;
+color: var(--brown);
+}
+
+.modal-acoes {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.modal-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 13px 20px;
+border-radius: 8px;
+background: var(--green);
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.modal-btn:hover {
+background: var(--green-dark);
+}
+
+.modal-btn-sec {
+background: transparent;
+color: var(--green);
+border: 2px solid var(--green);
+}
+
+.modal-btn-sec:hover {
+background: var(--green);
+color: white;
+}

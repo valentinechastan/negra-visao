@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/index.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="painel">
+                <h1><span class="X">X</span> Jogo da Velha <span class="O">O</span></h1>
+                <p>Dois jogadores, um tabuleiro. O placar fica salvo no seu navegador.</p>
+
+                <a class="botao" href="src/html/novo_jogo.html">Jogar</a>
+
+                <a class="botao secundario" href="src/html/customizar.html">Customizar</a>
+
+                <button class="botao perigo" id="limpar-dados" type="button">Limpar dados</button>
+
+                <p class="mensagem" id="mensagem" role="status"></p>
+
+                <a class="link-voltar" href="../index.html">&larr; Voltar ao site Negra Visão</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // "Limpar dados": apaga o placar e as cores salvas no navegador
+        const botaoLimpar = document.getElementById("limpar-dados")
+        const mensagem = document.getElementById("mensagem")
+
+        botaoLimpar.addEventListener("click", function () {
+            const confirmou = confirm("Apagar o placar e as cores personalizadas?")
+            if (!confirmou) {
+                return
+            }
+
+            localStorage.removeItem("placar_pontos")
+            localStorage.removeItem("tema_cores")
+            mensagem.textContent = "Dados apagados! O placar voltou para zero."
+        })
+    </script>
+</body>
+</html>

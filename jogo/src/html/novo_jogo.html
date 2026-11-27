@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogando</title>
+    <!-- criar um timer que vai deixar [jogando até jogando...] e em ciclo durante o game -->
+
+    <!-- importar as fontes do customizar -->
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/novo.css">
+
+    <script src="../js/tema.js"></script>
+
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+                <!-- iniciar o timer dpois da primeira jogada -->
+                <span class="timer">0.00</span>
+            </div>
+
+            <button class="voltar" aria-label="Voltar ao menu"><a href="../../index.html">X</a></button>
+        </header>
+
+        <h1>
+            <div>
+                <div class="placar">
+                    <span class="peca X"></span>
+                    <span class="peca O"></span>
+                    <span class="peca"></span>
+                </div>
+                <div class="time_jogando">
+                    <h3>Turno de: <span class="peca X">X</span></h3>
+                </div>
+            </div>
+        </h1>
+
+        <div class="tabuleiro">
+        </div>
+
+    </main>
+
+
+    <script src="../js/jogo.js"></script>
+</body>
+</html>
