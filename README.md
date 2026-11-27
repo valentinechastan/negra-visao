@@ -4,7 +4,7 @@ Projeto semestral de **Introdução ao Desenvolvimento Web** (ADS - IFSP Bragan�
 
 Site institucional sobre o **Quilombo Urbano Negra Visão** (Atibaia/SP), desenvolvido para a curricularização da extensão, com uma aplicação em JavaScript integrada: um **Jogo da Velha**.
 
-- 🔗 **Site publicado (Netlify):** [PREENCHER: https://SEU-SITE.netlify.app]
+- 🔗 **Site publicado (Netlify):** https://negra-visao.netlify.app/
 - 💻 **Repositório (GitHub):** https://github.com/valentinechastan/negra-visao/
 
 ## Equipe
@@ -67,7 +67,7 @@ Não precisa instalar nada: o projeto é HTML, CSS e JavaScript puros.
 
 1. Baixe ou clone o repositório:
    ```bash
-   git clone [PREENCHER: URL do repositório]
+   git clone https://github.com/valentinechastan/negra-visao/
    ```
 2. Abra o arquivo `index.html` (da raiz) no navegador (duplo clique), **ou** use a extensão *Live Server* do VS Code (botão direito em `index.html` → *Open with Live Server*).
 3. Para jogar, clique em **jogar** no menu do site.
