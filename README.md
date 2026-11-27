@@ -5,7 +5,7 @@ Projeto semestral de **Introdução ao Desenvolvimento Web** (ADS - IFSP Bragan�
 Site institucional sobre o **Quilombo Urbano Negra Visão** (Atibaia/SP), desenvolvido para a curricularização da extensão, com uma aplicação em JavaScript integrada: um **Jogo da Velha**.
 
 - 🔗 **Site publicado (Netlify):** [PREENCHER: https://SEU-SITE.netlify.app]
-- 💻 **Repositório (GitHub):** [PREENCHER: https://github.com/USUARIO/REPOSITORIO]
+- 💻 **Repositório (GitHub):** https://github.com/valentinechastan/negra-visao/
 
 ## Equipe
 
