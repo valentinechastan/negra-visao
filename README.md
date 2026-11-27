@@ -11,11 +11,10 @@ Site institucional sobre o **Quilombo Urbano Negra Visão** (Atibaia/SP), desenv
 
 | Integrante | Responsabilidade |
 |---|---|
-| [PREENCHER: Nome 1 (líder)] | [PREENCHER: ex. estrutura HTML e CSS do site] |
-| [PREENCHER: Nome 2] | [PREENCHER: ex. lógica do jogo (vitória, velha, placar)] |
-| [PREENCHER: Nome 3] | [PREENCHER: ex. timer, localStorage e customização] |
-| [PREENCHER: Nome 4] | [PREENCHER: ex. JavaScript do site e integração] |
-| [PREENCHER: Nome 5] | [PREENCHER: ex. README, Netlify e apresentação] |
+| Guilherme Bueno dos Santos | Estrutura HTML e CSS do site |
+| Valentine Louise de Chastan Bisanson Santos | Lógica do jogo (vitória, velha, placar) |
+| Leonardo dos Santos Bizarri | Timer, localStorage e customização |
+| Natalia Geni Felipe Spektor | JavaScript do site e integração |
 
 ## O que o projeto tem
 
